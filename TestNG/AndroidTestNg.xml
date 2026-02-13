@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <parameter name="deviceName" value="emulator-5554"/>
+    <parameter name="appFileName" value="/apps/General-Store.apk"/>
+    <parameter name="appPackage" value=""/>
+    <parameter name="appActivity" value=""/>
+    <parameter name="platformVersion" value="15"/>
+
+    <test name="AndroidTest">
+        <classes>
+            <class name="runner.AndroidTestRunner"/>
+        </classes>
+    </test>
+
+</suite>
