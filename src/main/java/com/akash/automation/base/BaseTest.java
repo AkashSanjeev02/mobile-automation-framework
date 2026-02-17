@@ -25,18 +25,13 @@ public class BaseTest {
     public static String iOSAppPackage;
     public static String iOSAppActivity;
 
-//    Common Utilities
+    /* ================== COMMON STATIC ELEMENTS ================== */
+
+    /* ================== DRIVER INITIALIZATION ================== */
 
     public static void initializeDriver(String platform) {
         AppiumDriver driver = DriverFactory.createDriver(platform);
         DriverManager.setDriver(driver);
-    }
-
-    public boolean isPlatformAndroid() {
-        return AndroidPlatformName.equalsIgnoreCase("Android");
-    }
-    public boolean isPlatformIos() {
-        return iOSPlatformName.equalsIgnoreCase("iOS");
     }
 
 }

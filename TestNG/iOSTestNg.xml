@@ -1,7 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="All Test Suite">
-    <test verbose="2" preserve-order="true" name="/Users/akashs/Learnings/mobile-automation-framework">
-        <classes/>
+    <parameter name="deviceName" value="iPhone 16 Pro Max"/>
+    <parameter name="appFileName" value="/apps/General-Store.apk"/>
+    <parameter name="appPackage" value=""/>
+    <parameter name="appActivity" value=""/>
+    <parameter name="platformVersion" value="18.o"/>
+
+    <test name="AndroidTest">
+        <classes>
+            <class name="runner.iOSTestRunner"/>
+        </classes>
     </test>
+
 </suite>

@@ -37,7 +37,7 @@ public class AndroidTestRunner extends AbstractTestNGCucumberTests {
                 } else {
                         System.out.println("Launching installed app on real device.");
                 }
-//                BaseTest.initializeDriver(BaseTest.AndroidPlatformName);
+                BaseTest.initializeDriver("Android");
         }
 
         @Override
