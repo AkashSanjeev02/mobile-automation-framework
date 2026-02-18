@@ -23,11 +23,11 @@ public class AndroidTestRunner extends AbstractTestNGCucumberTests {
         @BeforeSuite(alwaysRun = true)
         public void beforeSuite(String deviceName, String appFileName, String appPackage, String appActivity, String platformVersion) {
                 // Assign all parameters to the BaseClass instance
-                BaseTest.AndroidDeviceName = deviceName;
-                BaseTest.AndroidAppPath = appFileName;
-                BaseTest.AndroidAppPackage = appPackage;
-                BaseTest.AndroidAppActivity = appActivity;
-                BaseTest.AndroidPlatformVersion = platformVersion;
+                BaseTest.AndroidDeviceName.set(deviceName);
+                BaseTest.AndroidAppPath.set(appFileName);
+                BaseTest.AndroidAppPackage.set(appPackage);
+                BaseTest.AndroidAppActivity.set(appActivity);
+                BaseTest.AndroidPlatformVersion.set(platformVersion);
 
                 if (appFileName != null && !appFileName.isEmpty()) {
                         File apkFile = new File(System.getProperty("user.dir") + appFileName);

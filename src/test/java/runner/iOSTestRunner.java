@@ -7,6 +7,7 @@ import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Parameters;
 import java.io.File;
+import java.net.MalformedURLException;
 
 @CucumberOptions
         (
@@ -22,11 +23,11 @@ public class iOSTestRunner extends AbstractTestNGCucumberTests {
     @BeforeSuite(alwaysRun = true)
     public void beforeSuite(String deviceName, String appFileName, String appPackage, String appActivity, String platformVersion) {
         // Assign all parameters to the BaseClass instance
-        BaseTest.iOSDeviceName = deviceName;
-        BaseTest.iOSAppPath = appFileName;
-        BaseTest.iOSAppPackage = appPackage;
-        BaseTest.iOSAppActivity = appActivity;
-        BaseTest.iOSPlatformVersion = platformVersion;
+        BaseTest.iOSDeviceName.set(deviceName);
+        BaseTest.iOSAppPath.set(appFileName);
+        BaseTest.iOSAppPackage.set(appPackage);
+        BaseTest.iOSAppActivity.set(appActivity);
+        BaseTest.iOSPlatformVersion.set(platformVersion);
 
         if (appFileName != null && !appFileName.isEmpty()) {
             File apkFile = new File(System.getProperty("user.dir") + appFileName);

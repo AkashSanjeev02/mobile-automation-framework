@@ -9,21 +9,20 @@ public class BaseTest {
 //    Android Specific Capabilities
     public static final String AndroidAutomationName = "UiAutomator2";
     public static final String AndroidPlatformName = "Android";
-    public static String AndroidAppPath;
-    public static String AndroidDeviceName;
-    public static String AndroidPlatformVersion;
-    public static String AndroidAppPackage;
-    public static String AndroidAppActivity;
-
+    public static ThreadLocal<String> AndroidDeviceName = new ThreadLocal<>();
+    public static ThreadLocal<String> AndroidPlatformVersion = new ThreadLocal<>();
+    public static ThreadLocal<String> AndroidAppPath = new ThreadLocal<>();
+    public static ThreadLocal<String> AndroidAppPackage = new ThreadLocal<>();
+    public static ThreadLocal<String> AndroidAppActivity = new ThreadLocal<>();
 
 //   iOS Specific Capabilities
     public static final String iOSAutomationName = "XCUITest";
     public static final String iOSPlatformName = "iOS";
-    public static String iOSAppPath;
-    public static String iOSDeviceName;
-    public static String iOSPlatformVersion;
-    public static String iOSAppPackage;
-    public static String iOSAppActivity;
+    public static ThreadLocal<String> iOSDeviceName = new ThreadLocal<>();
+    public static ThreadLocal<String> iOSPlatformVersion = new ThreadLocal<>();
+    public static ThreadLocal<String> iOSAppPath = new ThreadLocal<>();
+    public static ThreadLocal<String> iOSAppPackage = new ThreadLocal<>();
+    public static ThreadLocal<String> iOSAppActivity = new ThreadLocal<>();
 
     /* ================== COMMON STATIC ELEMENTS ================== */
 
